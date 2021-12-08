@@ -1,0 +1,6 @@
+__pycache__
+*.pth
+*.pth-no-zip
+*.zip
+results
+REDS
