@@ -62,8 +62,8 @@ def main():
     model = model.to(device)
 
     def single_forward(model, imgs_in, F10, F12):
-        # imgs_in: [1, 4, 3, h, w]
-        # output:  [1, 4, 3, 4h, 4w]
+        # imgs_in: [n, 4, 3, h, w]
+        # output:  [n, 2, 3, 4h, 4w]
         with torch.no_grad():
             _, _, _, h, w = imgs_in.size()
             h_n = int(8 * np.ceil(h / 8))
